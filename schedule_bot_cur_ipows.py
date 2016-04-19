@@ -10,7 +10,7 @@ requests.packages.urllib3.disable_warnings()
 INTERVAL = 2  # check interval
 ADMIN_ID = 54801157  # ADMIN Unique ID
 URL = 'https://api.telegram.org/bot'  # bot API address
-TOKEN = '115893408:AAEE7xfAv76fPext6zBLBiLfveBTd9L2QoY'
+TOKEN = 'INPUT YOUR TOKEN HERE'
 offset = 0  # id of last update
 
 TOKEN_DATABASE_FILE = "/root/python_telegram/users.csv"
@@ -268,7 +268,6 @@ def schedule_add_token(from_id, token):
 # Main loop
 if __name__ == "__main__":
     init_token_database()
-    # schedule_add_token(ADMIN_ID, "c585f911932a80b5920185812c14fa0c")
     send_text(ADMIN_ID, u"#log_event (%s):\nСервер запущен" % time.ctime())
     while True:
         try:
